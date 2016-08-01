@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1470071193 source:/home/oavera/Dropbox/CodeProjects/C++Projects/SueldoDeEmpleados_Project/main.cpp
+	<iostream>
+	<list>
+	<stdlib.h>
+	<stdio.h>
+
