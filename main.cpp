@@ -30,7 +30,7 @@ void limpiarPantalla();
 
 //Eliminar empleado especificdo
 bool eliminarEmpleado(Lista *lstDeNomina,empleadoInfo empleado);
-//Buscar empleado por su No. de Id
+//Buscar empleado por su No. de Empleado
 empleadoInfo buscarEmpleado(Lista lstDeNomina,int no_empleado);
 //Definimos esta funcion para obtener el empleado con menor sueldo
 empleadoInfo obtenerEmpleadoCnMenorSueldo(Lista lstDeNomina);
@@ -209,9 +209,9 @@ empleadoInfo obtenerEmpleadoCnMenorSueldo(Lista lstDeNomina){
 }
 
 
-//Buscar empleado por su No. de Id
+//Buscar empleado por su No. de empleado
 empleadoInfo buscarEmpleado(Lista lstDeNomina,int no_empleado){
-    empleadoInfo empleado;//Empleado con menor sueldo
+    empleadoInfo empleado;
 
     empleado.no_empleado =  (int)EMPTY;
 
@@ -221,17 +221,17 @@ empleadoInfo buscarEmpleado(Lista lstDeNomina,int no_empleado){
     //Verificar si el no de empleado es igual al que se busca
       if(iEmpleado->no_empleado == no_empleado){
         empleado = *iEmpleado;
-        break;//Salir del for por que encontro al empleado
+        break;//Salir del for por que encontro al empleado especificado
       }
 
     }
 
-    return empleado;
+    return empleado;//Retornar la informacion del empleado
 }
 
 //Eliminar el empleado especificado
 bool eliminarEmpleado(Lista *lstDeNomina,empleadoInfo empleado){
-    bool fueEliminado = false;
+    bool fueEliminado = false;//Indicar si fue eliminado de la lista
 
     //Recorrer la lista de empleados hasta encontrar el empleado
     for(Lista::iterator iEmpleado = lstDeNomina->begin();iEmpleado!= lstDeNomina->end();iEmpleado++ ){
